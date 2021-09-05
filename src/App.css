@@ -1,38 +1,695 @@
-.App {
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+:root{
+  --primary-colour: #f8a932;
+  /* --primary-colour: #EF233C; */
+  --primary-red:#EF233C;
+}
+
+body{
+  font-family: "Roboto Condensed" sans-serif;
+}
+/* *********************************Navbar********************************************** */
+
+nav{
+  z-index: 2;
+  
+}
+.logo{
+  display: block;
+  width: 15rem !important;
+  margin: 0;
+  margin-top: -2.5rem;
+  padding: 0 !important;
+  margin-right: 0;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: white !important;
+  
+}
+
+.navbar{
+  background-color: rgba(0, 0, 0, 0.377);
+}
+.navbar-toggler {
+  color: #f8a932ab !important;
+  background: rgba(255, 255, 255, 0.39);
+}
+
+.nav a.nav-link{
+  font-weight: 500;
+  letter-spacing: 0.0375rem;
+  cursor: pointer;
+}
+
+.navbar-nav > li > a{
+  color: white !important;
+margin-right: 0.75rem;
+margin-left: 0.75rem;
+border-bottom: 0.1875rem solid transparent;
+
+}
+.navbar-nav > li > a.active, .navbar-nav > li > a.active:focus{
+  border-bottom: 0.1875rem solid var(--primary-colour);
+}
+.navbar-nav > li > a.active, .navbar-nav > li > a:hover{
+  border-bottom: 0.1875rem solid var(--primary-colour);
+}
+
+.navbar-brand{
+  max-width: 17.25rem;
+  padding: 0 !important;
+  height: 6rem !important;
+}
+
+/* ******************************Header************************************* */
+
+.hero{
+  position: relative;
+  background: url(https://images.unsplash.com/photo-1618335829737-2228915674e0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.header-wrapper{
+  position: relative;
+  height: 80vh;
+}
+.main-info{
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-info h1{
+  color:var(--primary-colour) ;
+  text-transform: uppercase;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* *************Typed Text******************* */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.typed-text{
+  font-size: 2rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* *************Typed Text******************* */
+.tsparticles-canvas-el{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* ***************About Me************************* */
+
+.about {
+  position: relative;
+  width: 100%;
+  margin: -45px 0 45px 0;
+}
+
+.about .col-lg-6 {
+  padding: 0;
+}
+
+.about .section-header {
+  margin-bottom: 30px;
+}
+
+.about .about-img {
+  position: relative;
+  height: 100%;
+}
+
+.about .about-img img {
+  border-radius: 0px 10px 10px 0px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about .about-content {
+  padding: 0 60px;
+}
+
+.about .about-text p {
+  font-size: 16px;
+}
+
+.about .skills {
+  margin-bottom: 30px;
+}
+
+.about .skill-name {
+  margin-top: 15px;
+}
+
+.about .skill-name p {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.about .skill-name p:last-child {
+  float: right;
+}
+
+.about .progress {
+  height: 10px;
+  border-radius: 10px;
+  /* transition: 2s; */
+  background: #dddddd;
+}
+
+
+.about .progress .progress-bar {
+  width: 0px;
+  background: var(--primary-colour);
+  border-radius: 10px;
+  transition: 2s;
+}
+
+.about .about-text a.btn {
+  margin-top: 15px;
+  font-weight: bold;
+  border-color: var(--primary-colour) !important;
+}
+
+
+@media (max-width: 991.98px) {
+  .about .about-content {
+      padding: 45px 15px 0 15px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+
+/* ______________________________________________________ */
+
+/* *******************Services**************************** */
+/*******************************/
+/********* Service CSS *********/
+/*******************************/
+.service {
+  position: relative;
+  width: 100%;
+  padding: 45px 0 15px 0;
+}
+
+.service .service-item {
+  position: relative;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 0 0 transparent;
+  transition: ease-out 0.5s;
+}
+
+.service .service-item:hover {
+  box-shadow: inset 800px 0 0 0 var(--primary-colour);
+}
+
+.service .service-icon {
+  position: relative;
+  width: 150px;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid var(--primary-colour); */
+  background: #ffffff;
+}
+.icon{
+  width: 14.5rem;
+}
+
+.service .service-icon i {
+  position: relative;
+  font-size: 60px;
+  color: var(--primary-colour);
+  transition: .3s;
+}
+
+.service .service-item:hover i {
+  font-size: 75px;
+}
+
+.service .service-text {
+  position: relative;
+  width: calc(100% - 120px);
+  padding: 0 30px;
+}
+
+.service .service-text h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  transition: 1s;
+}
+
+.service .service-text p {
+  margin: 0;
+  font-size: 16px;
+  transition: 1s;
+}
+
+.service .service-item:hover .service-text h3,
+.service .service-item:hover .service-text p {
+  color: #ffffff;
+}
+.service-item:hover{
+  border: 1px solid var(--primary-colour);
+}
+
+@media (max-width: 575.98px) {
+  .service .service-text h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
   }
+  .icon{
+    width: 14rem;
+    
+  }
+  
+  
+  .service .service-text p {
+      font-size: 14px;
+  }
+}
+
+
+/* *******************Experience************************* */
+
+/*******************************/
+/******* Experience CSS ********/
+/*******************************/
+.experience {
+  position: relative;
+  padding: 45px 0 15px 0;
+}
+
+.experience .timeline {
+  position: relative;
+  width: 100%;
+}
+
+.experience .timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: var(--primary-colour);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.experience .timeline .timeline-item {
+  position: relative;
+  background: inherit;
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+.experience .timeline .timeline-item.left {
+  left: 0;
+  padding-right: 30px;
+}
+
+.experience .timeline .timeline-item.right {
+  left: 50%;
+  padding-left: 30px;
+}
+
+.experience .timeline .timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 48px;
+  right: -8px;
+  background: #ffffff;
+  border: 2px solid var(--primary-colour);
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.experience .timeline .timeline-item.right::after {
+  left: -8px;
+}
+
+.experience .timeline .timeline-item::before {
+content: '';
+position: absolute;
+width: 0;
+height: 0;
+top: 46px;
+right: 10px;
+z-index: 1;
+border: 10px solid;
+border-color: transparent transparent transparent #dddddd;
+}
+
+.experience .timeline .timeline-item.right::before {
+left: 10px;
+border-color: transparent #dddddd transparent transparent;
+}
+
+.experience .timeline .timeline-date {
+  position: absolute;
+  width: 100%;
+  top: 44px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-colour);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+.experience .timeline .timeline-item.left .timeline-date {
+  text-align: left;
+  left: calc(100% + 55px);
+}
+
+.experience .timeline .timeline-item.right .timeline-date {
+  text-align: right;
+  right: calc(100% + 55px);
+}
+
+.experience .timeline .timeline-text {
+  padding: 30px;
+  background: #ffffff;
+  position: relative;
+  border-right: 5px solid #dddddd;
+  box-shadow: 0 0 60px rgba(0, 0, 0, .08);
+}
+
+.experience .timeline .timeline-item.right .timeline-text {
+  border-right: none;
+  border-left: 5px solid #dddddd;
+}
+
+.experience .timeline .timeline-text h2 {
+  margin: 0 0 5px 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.experience .timeline .timeline-text h4 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.experience .timeline .timeline-text p {
+  margin: 0;
+  font-size: 16px;
+}
+
+@media (max-width: 767.98px) {
+  .experience .timeline::after {
+      left: 8px;
+  }
+
+  .experience .timeline .timeline-item {
+      width: 100%;
+      padding-left: 38px;
+  }
+  
+  .experience .timeline .timeline-item.left {
+      padding-right: 0;
+  }
+  
+  .experience .timeline .timeline-item.right {
+      left: 0%;
+      padding-left: 38px;
+  }
+
+  .experience .timeline .timeline-item.left::after, 
+  .experience .timeline .timeline-item.right::after {
+      left: 0;
+  }
+  
+  .experience .timeline .timeline-item.left::before,
+  .experience .timeline .timeline-item.right::before {
+      left: 18px;
+      border-color: transparent #dddddd transparent transparent;
+  }
+  
+  .experience .timeline .timeline-item.left .timeline-date,
+  .experience .timeline .timeline-item.right .timeline-date {
+      position: relative;
+      top: 0;
+      right: auto;
+      left: 0;
+      text-align: left;
+      margin-bottom: 10px;
+  }
+  
+  .experience .timeline .timeline-item.left .timeline-text,
+  .experience .timeline .timeline-item.right .timeline-text {
+      border-right: none;
+      border-left: 5px solid #dddddd;
+  }
+}
+
+
+
+/* *********************Contact-Me************************* */
+/*******************************/
+/********* Contact CSS *********/
+/*******************************/
+.contact {
+  position: relative;
+  width: 100%;
+  margin: 45px 0;
+  background: var(--primary-colour);
+}
+
+.contact .container-fluid {
+  background: url(https://pbs.twimg.com/profile_images/1386644808903495687/0wek_LSZ_400x400.jpg) left center no-repeat;
+  background-size: contain;
+}
+
+.contact .contact-form {
+  position: relative;
+  padding: 90px 0 90px 45px;
+  background: var(--primary-colour);
+}
+
+.contact .contact-form input {
+  color: #ffffff;
+  padding: 15px 0;
+  background: none;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid rgba(256, 256, 256, .5);
+}
+
+.contact .contact-form textarea {
+  color: #ffffff;
+  height: 90px;
+  padding: 15px 0;
+  background: none;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid rgba(256, 256, 256, .5);
+}
+
+.contact .contact-form .form-control::placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
+.contact .contact-form .form-control:-ms-input-placeholder,
+.contact .contact-form .form-control::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.contact .contact-form .btn {
+  margin-top: 35px;
+  color: var(--primary-colour);
+  background: #ffffff;
+  box-shadow: inset 0 0 0 50px #ffffff;
+}
+
+.contact .contact-form .btn:hover {
+  color: #ffffff;
+  background: transparent;
+  box-shadow: inset 0 0 0 0 #ffffff;
+  border-color: #ffffff;
+}
+
+.contact .help-block ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 14px;
+  font-style: italic;
+  color: #ffffff;
+}
+
+@media (max-width: 767.98px) {
+  .contact .container-fluid {
+      background: none;
+  }
+  
+  .contact .contact-form {
+      padding: 90px 0;
+  }
+}
+
+/* ***************Footer******************* */
+/*******************************/
+/********* Footer CSS **********/
+/*******************************/
+.footer {
+  position: relative;
+  margin-top: 45px;
+  background: var(--primary-colour);
+}
+
+.footer .container-fluid {
+  padding: 60px 0 0 0;
+}
+
+.footer .footer-info {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.footer .footer-info h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.footer .footer-info h3 {
+  margin-bottom: 25px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.footer .footer-menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer .footer-menu p {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 0 15px;
+  border-right: 1px solid #ffffff;
+}
+
+.footer .footer-menu p:last-child {
+  border: none;
+}
+
+.footer .footer-social {
+  position: relative;
+  margin-top: 15px;
+}
+
+.footer .footer-social a {
+  display: inline-block;
+}
+
+.footer .footer-social a i {
+  margin-right: 15px;
+  font-size: 20px;
+  color: #ffffff;
+  transition: .3s;
+}
+
+.social-media-icons{
+  width: 2rem;
+  margin: 0.5rem;
+}
+.footer .footer-social a:last-child i {
+  margin: 0;
+}
+
+.footer .footer-social a:hover i {
+  color: #414141;
+}
+
+.footer .copyright {
+  position: relative;
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.footer .copyright::before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 1px;
+  top: 0;
+  left: 25%;
+  background: rgba(256, 256, 256, .2);
+}
+
+.footer .copyright p {
+  margin: 0;
+  color: #ffffff;
+}
+
+.footer .copyright .col-md-6:last-child p {
+  text-align: right;
+}
+
+.footer .copyright p a {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.footer .copyright p a:hover {
+  color: #414141;
+}
+
+@media (max-width: 575.98px) {
+  .footer .footer-info h2 {
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: 600;
+  }
+
+  .footer .footer-info h3 {
+      margin-bottom: 20px;
+      font-size: 16px;
+  }
+
+  .footer .footer-menu p {
+      font-size: 16px;
+      line-height: 16px;
+      padding: 0 5px;
+  }
+}
+
+
+/* *****************Utility Class************************ */
+.orange{
+  color: #f8a932 ;
 }
